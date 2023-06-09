@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color:#fff;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #aaaaaa;
+}
+
+.contentor{
+    width: 80%;
+    padding: 25px;
+    border-radius: 25px;
+    background: #3f3f3f;
+}
+
+.contentor .heading{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    padding: 0 0 20px 0;
+}
+
+.contentor .heading::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #000000;/* barra do cadastro*/
+}
+
+.contentor form .card-details{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+form .card-details .card-box{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;    
+}
+
+.card-details .card-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.card-details .card-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid "#ccc";
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.card-details .card-box input:focus,
+.card-details .card-box input:valid{
+    border-color: #70394e;
+}
+
+form .circal-form .circal-titlee{
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 2px solid;
+}
+
+form .circal-form .category{
+    margin-top: 10px;
+    margin-bottom: 10px;
+} 
+
+form .button{
+    text-align: center;
+}
+form .button input{
+    padding: 10px 0;
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color:#fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #0d6efd, #45bb58);
+}
+
+form .button input:hover{
+    background: linear-gradient(135deg, #0d6efd, #45bb58);
+}
+
+
+.foco{
+    border-width: 3px;
+    border-color:  #0de631;
+ }
+  
+  .semFoco{
+    border:none;
+  }
+  
+  .focoValorErrado{
+    border-width: 3px;
+    border-color:  #bc3131;
+  }
+
+@media screen and (min-width:0px) and (max-width:500px){
+    .contentor{
+        max-width: 100%; 
+        width: 80%; 
+    }
+    form .card-details .card-box{
+        margin-bottom: 15px;
+    }
+
+    form .circal-form .category{
+        width: 100%;
+    }
+
+    .contentor form .card-details {
+        max-height: 300px;
+        overflow: scroll;
+    }
+
+    .card-details::-webkit-scrollbar{
+        width:0;       
+    } 
+
+
+}
